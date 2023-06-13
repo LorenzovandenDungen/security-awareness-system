@@ -1,18 +1,21 @@
-import React from "react";
+// App.js
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import TrainingPage from "./pages/TrainingPage";
 import AdminPage from "./pages/AdminPage";
-import EmployeePage from "./pages/EmployeePage";
-import CompanyPage from "./pages/CompanyPage";
+// other imports...
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/training" element={<TrainingPage />} />
         <Route path="/admin" element={<AdminPage />} />
-        <Route path="/employee" element={<EmployeePage />} />
-        <Route path="/company" element={<CompanyPage />} />
+        {/* other routes... */}
       </Routes>
     </Router>
   );
